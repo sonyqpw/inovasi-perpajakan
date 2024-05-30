@@ -1,0 +1,345 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar img {
+    width: 150px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar a:hover {
+    color: #1f2797;
+}
+
+.navbar a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #1f2797;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25px;
+    width: 35px;
+    background: transparent;
+    border: none;
+    z-index: 1001;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger to X icon */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+  
+
+
+/* .home {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+} */
+
+.home::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.home .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+#video .video-row {
+    display: grid; /* Gunakan CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Buat kolom responsif */
+    gap: 20px; /* Jarak antar item grid */
+    padding: 20px; /* Padding di dalam grid */
+}
+
+#video .video-row video {
+    width: 100%; /* Lebar video responsif */
+    height: auto; /* Tinggi video otomatis */
+    border-radius: 5px; /* Pembulatan sudut video */
+}
+
+
+.home .content video {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+}
+
+.text-overlay h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.text-overlay h2 {
+    font-size: 2rem;
+}
+
+.text-overlay p {
+    font-size: 3rem;
+}
+
+.video {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.video .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.video .content .video-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.video .content video {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 1.2rem;
+}
+
+.video .content .han {
+    border-radius: 0.5rem;
+    display: inline-block;
+    padding: 0.4rem 4rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #2a2e80;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.video .content h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.soal {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10rem 7%;
+    margin-top: -10rem;
+}
+
+.soal .content h3 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ffffff;
+    line-height: 2;
+}
+
+.soal .content p {
+    font-size: 1em;
+    text-align: left;
+}
+
+.content h4 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #ffffff;
+    line-height: 2;
+}
+
+
+/* Styling untuk section anggota */
+#anggota {
+    padding: 40px 0; /* Padding atas dan bawah */
+}
+
+#anggota .content {
+    max-width: 800px; /* Lebar maksimum konten */
+    margin: auto; /* Pusatkan konten */
+    padding: 20px; /* Padding di dalam kotak konten */
+}
+
+
+#anggota .names {
+    padding: 0;
+    margin: 0;
+}
+
+#anggota .names li {
+    font-size: 18px; /* Ukuran font list */
+    padding: 8px 0; /* Padding atas dan bawah untuk setiap item */
+    border-bottom: 1px solid #ddd; /* Garis bawah setiap item */
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+        .text-overlay h1 {
+            font-size: 1rem;
+        }
+
+        .text-overlay h2 {
+            font-size: 1rem;
+        }
+
+        .text-overlay p {
+            font-size: 1rem;
+        }
+
+
+    .navbar img {
+        width: 100px; /* Adjust the size of the logo */
+    }
+
+    .nav-links {
+        display: none; /* Hide nav-links by default */
+        position: fixed;
+        right: -100vw;
+        top: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+    }
+
+    .nav-links.active {
+        display: flex; /* Display nav-links when active */
+        right: 0;
+    }
+
+    #anggota {
+        padding: 20px;
+    }
+     
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    #video .video-row {
+        grid-template-columns: repeat(2, 1fr); /* Tiga kolom dengan distribusi ruang yang sama */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    #video .video-row video:last-child {
+        grid-column: 1 / -1;
+        margin: auto;
+    }
+}

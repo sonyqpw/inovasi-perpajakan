@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok 4 : Perpajakan</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Fonts END -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div>
+                <img src="Image/unesa.png" alt="Logo Unesa" width="200px">
+            </div>
+            <div class="nav-links">
+                <a href="#home">Beranda</a>
+                <a href="#video">Video</a>
+                <a href="#soal">Soal</a>
+                <a href="#anggota">Kelompok</a>
+            </div>
+             <!-- Add a hamburger icon in the navbar -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>            
+           
+        </nav>
+
+        <!-- Hero Section 1 -->
+        <section class="home" id="home">
+            <main class="content">
+                <video src="Video/unesa.mp4" autoplay loop muted></video>
+                <div class="text-overlay">
+                    <h1>UNIVERSITAS NEGERI SURABAYA</h1>
+                    <h2>Kelompok 4</h2>
+                    <p>INOVASI DAN DIFUSI PENDIDIKAN</p>
+                </div>
+            </main>
+        </section>
+        <!-- Hero Section 1 END -->
+
+        <!-- Hero Section 2 -->
+        <section class="video" id="video">
+            <main class="content">
+                <h2>Video Materi Perpajakan
+                    <br>
+                    "Cara Menghitung Pajak Pendapatan Pertahun"
+                </h2>
+                <a href="#video" class="han">Video</a>
+                <div class="video-row">
+                    <video src="Video/1.mp4" controls></video>
+                    <video src="Video/2.mp4" controls></video>
+                    <video src="Video/3.mp4" controls></video>
+                </div>
+            </main>
+        </section>
+        <!-- Hero Section 2 END -->
+
+        <!-- Hero Section 3 -->
+        <section class="soal" id="soal">
+            <main class="content">
+                <h3>Soal</h3>
+                <p>
+                    1. Budi seorang manajer disebuah perusahaan, setiap bulan ia mendapatkan gaji sebesar 
+                    Rp12.400.000, ia sudah menikah dan belum memiliki anak. biaya jabatannya setiap tahun 
+                    adalah Rp4.000.000. Setiap tahun ia membayar iuran dana pensiun sebesar Rp1.800.000. 
+                    Pajak terutang Budi adalah.. <br><br>
+                    2. Dani, seorang tenaga kerja, dikenai pajak penghasilan 10% di mana penghasilan yang terkena 
+                    pajak Rp2.000.000. Jika Dani adalah seorang pegawai dengan besarnya gaji atau penghasilan 
+                    sebesar Rp3.200.000, maka besar penghasilan akhir yang diterimanya adalah..<br><br>
+                    3. Dani memiliki penghasilan Rp3.200.000, maka penghasilannya sudah terkena pajak. Jadi 
+                    penghasilan akhir yang diterimanya adalah.. <br><br>
+                    4. Pak Hasan memperoleh penghasilan kena pajak sebulan Rp45.000.000 dari bekerja di 
+                    perusahaan asing. Berdasarkan pajak penghasilan yang harus dibayar adalah.. <br><br>
+                    5. Bagus adalah seorang ayah yang sudah memiliki satu istri dan satu anak. Ia berpenghasilan 
+                    Rp96.000.000 per bulan dan mempunyai beban tanggungan Rp4.000.000 per bulan. Berikut 
+                    cara untuk menemukan pajak penghasilan.. <br>
+                </p>
+            </main>
+        </section>
+        <!-- Hero Section 3 END -->
+
+        <!-- Hero Section 4 -->
+        <section id="anggota">
+            <main class="content">
+                <h4>NAMA ANGGOTA KELOMPOK</h4>
+                <ol class="names">
+                    <li>Sonyq Putra Wijayanto</li>
+                    <li>Ummi Maghfirotin Nafiah</li>
+                    <li>Dema Prastisia</li>
+                    <li>Isti Fahniati Haniyah</li>
+                    <li>Angling Riaupan</li>
+                    <li>Anggi Julya Salfara</li>
+                </ol>
+            </main>
+        </section>
+        <!-- Hero Section 4 END -->
+    </header>
+
+    <footer>
+        <p>&copy; 2023 Kelompok 4. All rights reserved.</p>
+    </footer>
+
+    <script>
+     // JavaScript to toggle the menu
+     function toggleMenu() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    }
+
+        // JavaScript untuk menutup menu saat link diklik
+    document.addEventListener('DOMContentLoaded', (event) => {
+    // Pilih semua link di dalam .nav-links
+    document.querySelectorAll('.nav-links a').forEach((link) => {
+        link.addEventListener('click', () => {
+            // Panggil fungsi toggleMenu
+            toggleMenu();
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
